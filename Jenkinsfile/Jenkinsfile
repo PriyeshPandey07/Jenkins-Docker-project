@@ -6,7 +6,7 @@ pipeline {
     stages { 
         stage("checkout scm") {
             steps {
-                git url:'https://github.com/PriyeshPandey07/Jenkins-Docker-project.git', credentialsId: 'MyID', branch: 'Dockercompose'
+                git url:'https://github.com/PriyeshPandey07/Jenkins-Docker-project.git', credentialsId: 'MyID', branch: 'Dockercomapose'
             }
         }
         stage("build Image") { 
