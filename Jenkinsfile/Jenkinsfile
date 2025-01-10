@@ -6,7 +6,7 @@ pipeline {
     stages { 
         stage("checkout scm") {
             steps {
-                git url:'https://github.com/PriyeshPandey07/Jenkins-my-project.git', credentialsId: 'MyID', branch: 'main'
+                git url:'https://github.com/PriyeshPandey07/Jenkins-Docker-project.git', credentialsId: 'MyID', branch: 'Dockercompose'
             }
         }
         stage("build Image") { 
@@ -17,7 +17,7 @@ pipeline {
         }
         stage("Container Create") {
             steps {
-                sh "docker run -d -p 8089:80 --name myphpcon myphpimg:latest"
+                sh "docker-compose -up -d "
             }
         }
     }
