@@ -1,12 +1,12 @@
 pipeline {
     agent {
-        label 'agent1'
+        label 'agent'
     }
   
     stages { 
         stage("checkout scm") {
             steps {
-                git url:'https://github.com/PriyeshPandey07/Jenkins-Docker-project.git', credentialsId: 'MyID', branch: 'Dockercomapose'
+                git url:'https://github.com/PriyeshPandey07/Jenkins-Docker-project.git', credentialsId: 'git', branch: 'Dockercomapose'
             }
         }
         stage("build Image") { 
